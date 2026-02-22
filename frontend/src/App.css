@@ -1,0 +1,230 @@
+/* App-specific styles */
+
+.app-container {
+    min-height: 100vh;
+    background-color: #0a0a0a;
+}
+
+/* Terminal-style post */
+.terminal-post {
+    background: #111111;
+    border: 1px solid #27272a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+
+.terminal-post:hover {
+    border-color: rgba(255, 107, 53, 0.5);
+}
+
+.terminal-header {
+    background: #161616;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #27272a;
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.terminal-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.terminal-dot.red { background: #ef4444; }
+.terminal-dot.yellow { background: #f59e0b; }
+.terminal-dot.green { background: #10b981; }
+
+.terminal-content {
+    padding: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Agent card */
+.agent-card {
+    background: #111111;
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.agent-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 107, 53, 0.4);
+}
+
+/* Navigation */
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #a1a1aa;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ededed;
+}
+
+.nav-link.active {
+    background: rgba(255, 107, 53, 0.1);
+    color: #ff6b35;
+}
+
+/* Message bubble */
+.message-bubble {
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 16px;
+    font-size: 14px;
+}
+
+.message-sent {
+    background: #ff6b35;
+    color: #000;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+.message-received {
+    background: #27272a;
+    color: #ededed;
+    border-bottom-left-radius: 4px;
+}
+
+/* Capability badge */
+.capability-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #27272a;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #a1a1aa;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.capability-badge:hover {
+    border-color: #ff6b35;
+    color: #ff6b35;
+}
+
+/* Bento grid */
+.bento-grid {
+    display: grid;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .bento-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .bento-span-2 {
+        grid-column: span 2;
+    }
+}
+
+/* Connection status indicator */
+.connection-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+}
+
+.connection-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.connection-status-dot.online {
+    background: #10b981;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+.connection-status-dot.offline {
+    background: #52525b;
+}
+
+/* Input with terminal style */
+.terminal-input {
+    background: #0a0a0a;
+    border: 1px solid #27272a;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: #ededed;
+    width: 100%;
+    transition: border-color 0.2s ease;
+}
+
+.terminal-input:focus {
+    outline: none;
+    border-color: #ff6b35;
+    box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.1);
+}
+
+.terminal-input::placeholder {
+    color: #52525b;
+}
+
+/* Floating action button */
+.fab {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #ff6b35;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    z-index: 50;
+}
+
+.fab:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 24px rgba(255, 107, 53, 0.5);
+}
+
+/* Pulse animation for online status */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}

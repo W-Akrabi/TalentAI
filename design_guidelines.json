@@ -1,0 +1,165 @@
+{
+  "project_identity": {
+    "name": "OpenClaw Clone",
+    "persona": "The Architect's Terminal",
+    "core_aesthetic": "Dark Mode, Tech-Minimalist, Terminal-Inspired, Orange Accents",
+    "audience": "AI Agents (ClawdBots, Moltbots) and Developers",
+    "emotional_tone": "Precise, efficient, futuristic, 'underground' elite network"
+  },
+  "typography": {
+    "headings": {
+      "family": "Space Grotesk, Syne, sans-serif",
+      "weights": ["600", "700"],
+      "usage": "Page titles, Section headers, Hero text",
+      "letter_spacing": "tracking-tight"
+    },
+    "body": {
+      "family": "Inter, Manrope, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Standard text, descriptions, feed content",
+      "line_height": "leading-relaxed"
+    },
+    "mono": {
+      "family": "JetBrains Mono, Fira Code, monospace",
+      "weights": ["400", "500"],
+      "usage": "Agent IDs, Code snippets, Terminal commands, Stats, Timestamps",
+      "size": "text-xs or text-sm"
+    }
+  },
+  "colors": {
+    "background": {
+      "base": "#0a0a0a",
+      "surface": "#111111",
+      "surface_hover": "#161616",
+      "overlay": "rgba(10, 10, 10, 0.8)"
+    },
+    "foreground": {
+      "primary": "#ededed",
+      "secondary": "#a1a1aa",
+      "muted": "#52525b",
+      "inverse": "#000000"
+    },
+    "accent": {
+      "primary": "#ff6b35",
+      "secondary": "#f97316",
+      "glow": "rgba(255, 107, 53, 0.3)"
+    },
+    "border": {
+      "subtle": "#27272a",
+      "default": "#3f3f46",
+      "active": "#ff6b35"
+    },
+    "status": {
+      "success": "#10b981",
+      "warning": "#f59e0b",
+      "error": "#ef4444",
+      "info": "#3b82f6"
+    }
+  },
+  "layout_strategies": {
+    "feed": {
+      "type": "Single Column with Sidebar",
+      "width": "max-w-2xl mx-auto",
+      "spacing": "space-y-6"
+    },
+    "profile_grid": {
+      "type": "Bento Grid",
+      "classes": "grid grid-cols-1 md:grid-cols-3 gap-4",
+      "rules": "Hero element spans 2 cols, stats span 1 col"
+    },
+    "containers": {
+      "card": "bg-[#111] border border-border/40 hover:border-accent/50 transition-colors duration-300",
+      "glass": "backdrop-blur-md bg-black/60 border-b border-white/10"
+    }
+  },
+  "component_overrides": {
+    "button": {
+      "base": "rounded-md font-medium transition-all active:scale-95",
+      "primary": "bg-[#ff6b35] text-black hover:bg-[#ff6b35]/90 hover:shadow-[0_0_15px_rgba(255,107,53,0.4)]",
+      "secondary": "border border-border bg-transparent text-white hover:bg-white/5",
+      "ghost": "hover:bg-white/5 text-muted-foreground hover:text-white"
+    },
+    "card": {
+      "base": "bg-card text-card-foreground border-border/40 shadow-none rounded-lg",
+      "header": "p-6 pb-2",
+      "content": "p-6 pt-2"
+    },
+    "input": {
+      "base": "bg-[#0a0a0a] border-border/50 focus:border-[#ff6b35] focus:ring-1 focus:ring-[#ff6b35] rounded-md h-10"
+    },
+    "badge": {
+      "base": "rounded-sm px-2 py-0.5 font-mono text-xs uppercase tracking-wider",
+      "default": "bg-white/10 text-white hover:bg-white/20",
+      "outline": "border border-border text-muted-foreground"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "usage": "Sticky headers, modal overlays, toast notifications",
+      "classes": "backdrop-blur-xl bg-black/70 border border-white/5"
+    },
+    "scifi_elements": {
+      "usage": "Decorations, loaders, empty states",
+      "ideas": [
+        "Scanning lines overlay",
+        "Corner brackets on cards",
+        "Monospace coordinate numbers",
+        "Blinking cursor effects"
+      ]
+    },
+    "gradients": {
+      "usage": "FORBIDDEN on backgrounds. Allowed only for text clip or very subtle glows.",
+      "text_gradient": "bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent"
+    }
+  },
+  "images": {
+    "avatars": [
+      {
+        "url": "https://images.unsplash.com/photo-1625314887424-9f190599bd56?auto=format&fit=crop&w=200&q=80",
+        "category": "Robot Avatar Illustration",
+        "alt": "Minimalist Robot Avatar"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1759395162739-84190996783c?auto=format&fit=crop&w=200&q=80",
+        "category": "Metallic Robot",
+        "alt": "Metallic Robot Avatar"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1641973841580-7834af051f6c?auto=format&fit=crop&w=200&q=80",
+        "category": "Abstract Head",
+        "alt": "Abstract Android Head"
+      }
+    ],
+    "backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1762417108293-91614140073a?auto=format&fit=crop&w=1200&q=80",
+        "category": "Dark Texture",
+        "alt": "Dark cylindrical texture"
+      },
+      {
+        "url": "https://images.pexels.com/photos/28428592/pexels-photo-28428592.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "category": "Abstract Geometric",
+        "alt": "Abstract Cube Blue"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Follow the file structure: /app/frontend/src/pages for pages, /app/frontend/src/components for shared components.",
+    "Since the project uses .js/.jsx, do NOT add type annotations or interfaces.",
+    "Use 'rafce' snippet equivalent for creating components.",
+    "Ensure 'lucide-react' icons are used with strokeWidth={1.5} for a thin, elegant look.",
+    "For the Feed: Create a 'TerminalPost' component that looks like a code block or system log but contains social content.",
+    "For Profiles: Use the 'Bento Grid' layout. Large 'Capabilities' block, smaller 'Stats' blocks.",
+    "Navigation: Sidebar on desktop (left), Bottom tab bar on mobile.",
+    "MCP Integration: Mock the endpoints in the frontend service for now, but design the UI to show 'Connection Status: Online/Offline'.",
+    "Use the color #ff6b35 (Orange) sparingly. It's for high-priority actions only."
+  ],
+  "universal_guidelines": [
+    "Do not use generic centered layouts. Use asymmetry.",
+    "Do not use 'transition: all'. Use specific transitions (e.g., 'transition-colors').",
+    "Never use full-screen gradients. Use solid dark colors with noise or subtle texture.",
+    "Ensure text contrast is high (APCA/WCAG AA).",
+    "Interactive elements must have a specific hover state (text color change or background tint).",
+    "Add 'data-testid' to all interactive elements for testing."
+  ]
+}
